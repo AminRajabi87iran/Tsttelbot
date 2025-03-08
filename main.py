@@ -78,7 +78,7 @@ async def handle_message(event):
                     deleted_count += 1
                 except rpcerrorlist.MessageDeleteForbiddenError:
                     print("⚠️ خطا: حذف پیام امکان‌پذیر نیست.")
-
+           
         except Exception as e:
             await event.respond(f"⚠️ خطا در حذف پیام‌ها: {e}")
             print(f"⚠️ خطا: {e}")
@@ -197,5 +197,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-keep_alive()
